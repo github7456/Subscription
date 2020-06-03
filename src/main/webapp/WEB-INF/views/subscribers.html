@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Subscribers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+<body>
+<h1>All subscribers</h1>
+
+<table>
+    <tr>
+        <td>Email</td>
+        <td>Name</td>
+    </tr>
+    <tr th:each="sub:${subs}">
+        <td th:text="${sub.email}"/>
+        <td th:text="${sub.name}"/>
+    </tr>
+</table>
+
+</body>
+</html>
